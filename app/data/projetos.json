@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "titulo": "Kunsthalle Basel",
+    "descricao": "Building an institutional brand with an anti-institutional spirit",
+    "miniatura": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Kunsthalle_Basel_logo.svg",
+    "capa": "https://images.unsplash.com/photo-1557683316-973673baf926",
+    "imagens": [
+      "https://images.unsplash.com/photo-1508921340878-ba53e1f016ec",
+      "https://images.unsplash.com/photo-1557682224-5b8590cd9ec5",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+    ]
+  },
+  {
+    "id": 2,
+    "titulo": "Nike Run",
+    "descricao": "A dynamic new identity rooted in legacy, built for the future",
+    "miniatura": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Run_logo.svg",
+    "capa": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97",
+    "imagens": [
+      "https://images.unsplash.com/photo-1517836357463-d25dfeac3438",
+      "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f",
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+    ]
+  },
+  {
+    "id": 3,
+    "titulo": "Gemini",
+    "descricao": "Ushering in a new era for Google",
+    "miniatura": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
+    "capa": "https://images.unsplash.com/photo-1487014679447-9f8336841d58",
+    "imagens": [
+      "https://images.unsplash.com/photo-1487014679447-9f8336841d58",
+      "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f",
+      "https://images.unsplash.com/photo-1517694712202-14dd9538aa97"
+    ]
+  }
+]
