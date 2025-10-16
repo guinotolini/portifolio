@@ -7,7 +7,7 @@ export default function GaleriaPage() {
     <main className="min-h-screen bg-gray-100 p-6">
       <Link href="/" className="text-blue-600 underline mb-4 block">← Voltar para Home</Link>
       <h1 className="text-3xl font-bold text-center mb-8">Galeria Completa</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-6">
         {galeria.map((item) => (
           <div key={item.id} className="overflow-hidden rounded-2xl shadow-md">
             <Image
