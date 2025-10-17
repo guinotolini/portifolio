@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Sidebar from './components/menuLateral'
 import InfoGrid from './components/infoGrid'
@@ -20,6 +20,15 @@ export default function Home() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
   const [showInfo, setShowInfo] = useState(false)
   const [showGallery, setShowGallery] = useState(false)
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
+
+  // Alterna automaticamente as capas dos projetos a cada 5s
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % projetos.length)
+    }, 5000)
+    return () => clearInterval(interval)
+  }, [])
 
   const handleSelectFromGallery = (id: number) => {
     const project = projetos.find((p) => p.id === id)
@@ -38,9 +47,8 @@ export default function Home() {
           selectedId={selectedProject?.id ?? null}
           showInfo={showInfo}
           onProjectSelect={(project) => {
-            // ao selecionar um projeto, fecha info e define o projeto
             if (selectedProject?.id === project.id) {
-              setSelectedProject(null) // clicar no mesmo fecha
+              setSelectedProject(null)
             } else {
               setSelectedProject(project)
             }
@@ -48,11 +56,10 @@ export default function Home() {
             setShowGallery(false)
           }}
           onInfoClick={() => {
-            // toggle: se já está aberto, fecha; se não, abre e limpa selectedProject
             setShowInfo((prev) => {
               const next = !prev
               if (next) {
-                setSelectedProject(null) // abrir Info: limpa seleção de projeto
+                setSelectedProject(null)
                 setShowGallery(false)
               }
               return next
@@ -68,17 +75,22 @@ export default function Home() {
         ) : showInfo ? (
           <InfoGrid />
         ) : !selectedProject ? (
-          <div className="w-full h-full relative rounded-2xl overflow-hidden">
+          // Slide automático das capas dos projetos
+          <div className="w-full h-full relative rounded-2xl overflow-hidden transition-all duration-700">
             <Image
-              src="https://images.unsplash.com/photo-1587300003388-59208cc962cb"
-              alt="Main"
+              key={projetos[currentImageIndex].id}
+              src={projetos[currentImageIndex].capa}
+              alt={projetos[currentImageIndex].titulo}
               fill
-              className="object-cover"
+              className="object-cover transition-opacity duration-1000"
             />
+            {/* <div className="absolute bottom-4 left-4 bg-black/50 text-white px-4 py-2 rounded-lg backdrop-blur-sm">
+              <h2 className="text-lg font-semibold">{projetos[currentImageIndex].titulo}</h2>
+            </div> */}
           </div>
         ) : (
+          // Quando há um projeto selecionado, exibe as imagens dele
           <div>
-            {/* Grid de Imagens */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 h-full overflow-y-auto">
               {selectedProject.imagens.map((img, index) => (
                 <div key={index} className="relative w-full h-64 rounded-2xl overflow-hidden">
