@@ -35,10 +35,12 @@ export default function Home() {
       {/* SIDEBAR */}
       <div className="w-full md:w-[38vh] md:flex-shrink-0">
         <Sidebar
-          selectedId={selectedProject?.id ?? null}       // <-- aqui
+          selectedId={selectedProject?.id ?? null}
+          showInfo={showInfo}
           onProjectSelect={(project) => {
+            // ao selecionar um projeto, fecha info e define o projeto
             if (selectedProject?.id === project.id) {
-              setSelectedProject(null) // clicar de novo fecha
+              setSelectedProject(null) // clicar no mesmo fecha
             } else {
               setSelectedProject(project)
             }
@@ -46,9 +48,15 @@ export default function Home() {
             setShowGallery(false)
           }}
           onInfoClick={() => {
-            setSelectedProject(null)
-            setShowInfo(true)
-            setShowGallery(false)
+            // toggle: se já está aberto, fecha; se não, abre e limpa selectedProject
+            setShowInfo((prev) => {
+              const next = !prev
+              if (next) {
+                setSelectedProject(null) // abrir Info: limpa seleção de projeto
+                setShowGallery(false)
+              }
+              return next
+            })
           }}
         />
       </div>

@@ -15,13 +15,15 @@ interface Project {
 
 interface SidebarProps {
   selectedId: number | null
+  showInfo: boolean
   onProjectSelect: (project: Project) => void
   onInfoClick: () => void
 }
 
-export default function Sidebar({ selectedId, onProjectSelect, onInfoClick }: SidebarProps) {
+export default function Sidebar({ selectedId, showInfo, onProjectSelect, onInfoClick }: SidebarProps) {
   return (
     <aside className="h-full w-full md:w-[38vh] bg-white border-r border-gray-200 p-5 overflow-y-auto rounded-r-2xl md:rounded-none">
+      {/* Cabeçalho */}
       <header className="text-center mb-8">
         <h2 className="text-md font-semibold font-doto uppercase tracking-[0.6vh] mt-8 text-black">
           Guilherme Notolini
@@ -29,34 +31,43 @@ export default function Sidebar({ selectedId, onProjectSelect, onInfoClick }: Si
         <p className="text-sm font-inter text-gray-400 mt-1">Designer | Diretor de Arte</p>
       </header>
 
-      {/* INFO */}
+      {/* Seção Info */}
+      {/* Regras:
+          - Se showInfo === true  => Info fica visível no mobile (flex) e clicável (toggle).
+          - Se selectedId !== null => Info é escondido no mobile (porque um projeto está aberto).
+          - No desktop (sm+), Info sempre aparece.
+      */}
       <section
-        className={`mb-8 cursor-pointer ${selectedId ? 'hidden sm:block' : ''}`} // se um projeto está selecionado, esconder Info no mobile
+        // mobile: mostrar somente se showInfo true; se selectedId existe, esconder no mobile.
+        className={`mb-8 cursor-pointer flex flex-col ${
+          showInfo ? 'flex' : selectedId ? 'hidden sm:flex' : 'flex'
+        }`}
         onClick={onInfoClick}
       >
         <h3 className="font-inter text-xs uppercase text-gray-500 mb-2">Info</h3>
-        <div className="bg-gray-100 p-4 rounded-xl hover:bg-gray-200 transition">
-          <h4 className="font-inter text-sm font-semibold text-black mb-2">About us</h4>
+        <div className="bg-gray-100 p-4 rounded-xl hover:bg-gray-200 transition w-full">
+          <h4 className="font-inter text-sm font-semibold text-black mb-2">Sobre</h4>
           <p className="font-inter text-sm text-gray-500">
-            We are a New York-based agency uniting strategy and design to make work that evolves
-            with the world we live in.
+            Agência criativa baseada em Nova York unindo estratégia e design para evoluir com o
+            mundo que vivemos.
           </p>
         </div>
       </section>
 
-      {/* PROJETOS */}
+      {/* Lista de Projetos */}
       <section>
-        <h3 className={`font-inter text-xs uppercase text-gray-500 mb-2 ${selectedId ? 'hidden sm:block' : ''}`}>
+        <h3
+          className={`font-inter text-xs uppercase text-gray-500 mb-2 ${
+            (selectedId || showInfo) ? 'hidden sm:block' : ''
+          }`}
+        >
           Projetos
         </h3>
 
         {projetos.map((project) => {
           const isSelected = selectedId === project.id
-
-          // Se existe selectedId e este projeto NÃO é o selecionado:
-          // -> esconder no mobile: use classes 'hidden sm:flex' (hidden for <sm, flex for >=sm)
-          const baseClass =
-            selectedId && !isSelected ? 'hidden sm:flex' : 'flex' // show only selected on mobile
+          const hideOthers = Boolean(selectedId) || showInfo // se projeto selecionado ou showInfo aberto -> esconder os outros no mobile
+          const baseClass = hideOthers && !isSelected ? 'hidden sm:flex' : 'flex'
 
           return (
             <div
