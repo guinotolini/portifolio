@@ -2,8 +2,8 @@
   {
     "id": 1,
     "titulo": "KN2",
-    "descricao": "Construção de marca, embalagem e social mídia"
-    "miniatura": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Kunsthalle_Basel_logo.svg",
+    "descricao": "Construção de marca, embalagem e social mídia",
+    "miniatura":"../../public/images/KN2.png",
     "capa": "https://images.unsplash.com/photo-1557683316-973673baf926",
     "imagens": [
       "https://images.unsplash.com/photo-1508921340878-ba53e1f016ec",
