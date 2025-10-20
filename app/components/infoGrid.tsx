@@ -95,11 +95,6 @@ export default function InfoGrid() {
           </p>
           <p className="font-inter text-gray-500 mt-2">WhatsApp: 12 98885-2050</p>
         </div>
-
-        <div>
-          <h4 className="font-inter font-semibold mb-1 text-black text-base">Vagas Disponíveis</h4>
-          <p className="font-inter text-gray-500">UX Designer</p>
-        </div>
       </div>
     </div>
   )

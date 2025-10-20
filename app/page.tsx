@@ -26,7 +26,7 @@ export default function Home() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % projetos.length)
-    }, 5000)
+    }, 2000)
     return () => clearInterval(interval)
   }, [])
 

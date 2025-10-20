@@ -3,8 +3,8 @@
     "id": 1,
     "titulo": "KN2",
     "descricao": "Construção de marca, embalagem e social mídia",
-    "miniatura":"../../public/images/KN2.png",
-    "capa": "https://images.unsplash.com/photo-1557683316-973673baf926",
+    "miniatura":"/miniaturas/kn2.png",
+    "capa": "/images/KN2_01.jpg",
     "imagens": [
       "https://images.unsplash.com/photo-1508921340878-ba53e1f016ec",
       "https://images.unsplash.com/photo-1557682224-5b8590cd9ec5",

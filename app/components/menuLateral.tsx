@@ -2,6 +2,7 @@
 
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import projetos from '@/app/data/projetos.json'
 
 interface Project {
@@ -23,11 +24,11 @@ interface SidebarProps {
 export default function Sidebar({ selectedId, showInfo, onProjectSelect, onInfoClick }: SidebarProps) {
   return (
     <aside className="h-full w-full md:w-[38vh] bg-white border-r border-gray-200 p-5 overflow-y-auto rounded-r-2xl md:rounded-none">
+      
+      <Link href={"galeria"} className='bg-gray-100 text-sm font-inter text-black  px-3 py-2 rounded-full'>Todos os projetos</Link>
       {/* Cabeçalho */}
-      <header className="text-center mb-8">
-        <h2 className="text-md font-semibold font-doto uppercase tracking-[0.6vh] mt-8 text-black">
-          Guilherme Notolini
-        </h2>
+      <header className="text-center mt-10 mb-8">
+        <Link href={"/"} className="text-md font-semibold font-doto uppercase tracking-[0.6vh] mt-8 text-black">Guilherme Notolini</Link>
         <p className="text-sm font-inter text-gray-400 mt-1">Designer | Diretor de Arte</p>
       </header>
 
@@ -75,12 +76,12 @@ export default function Sidebar({ selectedId, showInfo, onProjectSelect, onInfoC
               onClick={() => onProjectSelect(project)}
               className={`${baseClass} items-center gap-3 bg-gray-100 p-3 rounded-xl cursor-pointer hover:bg-gray-200 transition mb-3`}
             >
-              <div className="flex-shrink-0 w-10 h-10 bg-white rounded-lg flex items-center justify-center">
+              <div className="flex-shrink-0 w-14 h-14 bg-white rounded-xl flex items-center justify-center">
                 <Image
                   src={project.miniatura}
                   alt={project.titulo}
-                  width={40}
-                  height={40}
+                  width={100}
+                  height={100}
                   className="object-contain"
                 />
               </div>
