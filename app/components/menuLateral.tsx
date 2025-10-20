@@ -25,7 +25,7 @@ export default function Sidebar({ selectedId, showInfo, onProjectSelect, onInfoC
   return (
     <aside className="h-full w-full md:w-[38vh] bg-white border-r border-gray-200 p-5 overflow-y-auto rounded-r-2xl md:rounded-none">
       
-      <Link href={"galeria"} className='bg-gray-100 text-sm font-inter text-black  px-3 py-2 rounded-full'>Todos os projetos</Link>
+      <Link href={"galeria"} className='bg-gray-100 hover:bg-gray-200 text-sm font-inter text-black  px-3 py-2 rounded-full cursor-pointer'>Todos os projetos</Link>
       {/* Cabeçalho */}
       <header onClick={() => window.location.reload()} className="text-center mt-10 mb-8 cursor-pointer">
         <button className="text-md font-semibold font-doto uppercase tracking-[0.6vh] mt-8 text-black">Guilherme Notolini</button>
