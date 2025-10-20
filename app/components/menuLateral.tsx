@@ -84,7 +84,7 @@ export default function Sidebar({ selectedId, showInfo, onProjectSelect, onInfoC
                   alt={project.titulo}
                   width={100}
                   height={100}
-                  className="object-contain"
+                  className="object-contain rounded-xl"
                 />
               </div>
               <div className="flex-1">
