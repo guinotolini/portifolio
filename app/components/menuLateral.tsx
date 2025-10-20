@@ -47,10 +47,12 @@ export default function Sidebar({ selectedId, showInfo, onProjectSelect, onInfoC
       >
         <h3 className="font-inter text-xs uppercase text-gray-500 mb-2">Info</h3>
         <div className="bg-gray-100 p-4 rounded-xl hover:bg-gray-200 transition w-full">
-          <h4 className="font-inter text-sm font-semibold text-black mb-2">Sobre</h4>
+          <div className="flex justify-between items-center">
+            <h4 className="font-inter text-sm font-semibold text-black mb-2">Sobre</h4>
+            <p className="font-inter text-xs text-gray-700">Ver Mais</p>
+          </div>
           <p className="font-inter text-sm text-gray-500">
-            Agência criativa baseada em Nova York unindo estratégia e design para evoluir com o
-            mundo que vivemos.
+            Marido, Pai, Designer e Diretor de arte.
           </p>
         </div>
       </section>

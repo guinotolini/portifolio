@@ -6,33 +6,71 @@
     "miniatura":"/miniaturas/kn2.png",
     "capa": "/images/KN2_01.jpg",
     "imagens": [
-      "https://images.unsplash.com/photo-1508921340878-ba53e1f016ec",
-      "https://images.unsplash.com/photo-1557682224-5b8590cd9ec5",
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+      "/images/KN2_02.jpg",
+      "/images/KN2_03-04.jpg",
+      "/images/KN2_03.jpg"
     ]
   },
   {
     "id": 2,
-    "titulo": "Nike Run",
-    "descricao": "A dynamic new identity rooted in legacy, built for the future",
-    "miniatura": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Run_logo.svg",
-    "capa": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97",
+    "titulo": "Google",
+    "descricao": "Direção de arte para os filmes de Black Friday",
+    "miniatura": "/miniaturas/google-02.png",
+    "capa": "/images/02.gif",
     "imagens": [
-      "https://images.unsplash.com/photo-1517836357463-d25dfeac3438",
-      "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+      "/images/02.gif"
     ]
   },
   {
     "id": 3,
-    "titulo": "Gemini",
-    "descricao": "Ushering in a new era for Google",
-    "miniatura": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
+    "titulo": "Maestra",
+    "descricao": "Construção de marca, papelaria, Midias sociais e Web.",
+    "miniatura": "/miniaturas/maestra-06.png",
+    "capa": "/images/04.jpg",
+    "imagens": [
+      "/images/04.jpg"
+    ]
+  },
+  {
+    "id": 4,
+    "titulo": "Estadão",
+    "descricao": "Plataforma digital, posters e Motion.",
+    "miniatura": "/miniaturas/estadão-04.png",
     "capa": "https://images.unsplash.com/photo-1487014679447-9f8336841d58",
     "imagens": [
       "https://images.unsplash.com/photo-1487014679447-9f8336841d58",
       "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f",
       "https://images.unsplash.com/photo-1517694712202-14dd9538aa97"
+    ]
+  },
+  {
+    "id": 5,
+    "titulo": "Joy Crock",
+    "descricao": "Construção de marca para franquia.",
+    "miniatura": "/miniaturas/Joy Crock-05.png",
+    "capa": "/images/05.jpg",
+    "imagens": [
+      "/images/05.jpg"
+    ]
+  },
+  {
+    "id": 6,
+    "titulo": "Huggies",
+    "descricao": "Midias sociais",
+    "miniatura": "/miniaturas/huggies-07.png",
+    "capa": "/images/06.jpg",
+    "imagens": [
+      "/images/06.jpg"
+    ]
+  },
+  {
+    "id": 7,
+    "titulo": "Casas Bahia",
+    "descricao": "Midias sociais",
+    "miniatura": "/miniaturas/Logos-03.png",
+    "capa": "/images/01.jpg",
+    "imagens": [
+      "/images/01.jpg"
     ]
   }
 ]
