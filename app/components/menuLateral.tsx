@@ -29,7 +29,7 @@ export default function Sidebar({ selectedId, showInfo, onProjectSelect, onInfoC
       {/* Cabeçalho */}
       <Link href={"/"} onClick={() => window.location.reload()} className="text-center mb-8 cursor-pointer">
         <h4 className="text-md font-semibold font-doto uppercase tracking-[0.6vh] mt-14 text-black">Guilherme Notolini</h4>
-        <p className="text-sm font-inter text-gray-400 mt-1 mb-14">Designer | Diretor de Arte | PCD </p>
+        <p className="text-sm font-inter text-gray-400 mt-1 mb-14">Designer | Diretor de Arte (PCD) </p>
       </Link>
 
       {/* Seção Info */}
