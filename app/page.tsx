@@ -1,11 +1,7 @@
 'use client'
 
-export const dynamic = 'force-dynamic'
-export const fetchCache = 'force-no-store'
-
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
-import { useSearchParams } from 'next/navigation'
 import Sidebar from './components/menuLateral'
 import InfoGrid from './components/infoGrid'
 import GaleriaGrid from './components/galeriaGrid'
@@ -26,20 +22,21 @@ export default function Home() {
   const [showGallery, setShowGallery] = useState(false)
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
-  const searchParams = useSearchParams()
-  const projectId = searchParams.get('id')
-
   // Se houver um ?id= na URL, abre o projeto correspondente automaticamente
   useEffect(() => {
-    if (projectId) {
-      const project = projetos.find((p) => p.id === Number(projectId))
-      if (project) {
-        setSelectedProject(project)
-        setShowInfo(false)
-        setShowGallery(false)
-      }
+  const storedId = localStorage.getItem('selectedProjectId')
+  if (storedId) {
+    const project = projetos.find((p) => p.id === Number(storedId))
+    if (project) {
+      setSelectedProject(project)
+      setShowInfo(false)
+      setShowGallery(false)
     }
-  }, [projectId])
+    // limpa o valor para evitar reabrir o mesmo projeto no próximo acesso
+    localStorage.removeItem('selectedProjectId')
+  }
+}, [])
+
 
   // Alterna automaticamente as capas dos projetos a cada 5s
   useEffect(() => {

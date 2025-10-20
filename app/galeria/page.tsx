@@ -11,8 +11,10 @@ interface GaleriaGridProps {
 export default function GaleriaPage({ onSelectProject }: GaleriaGridProps)  {
   const router = useRouter()
   const handleSelect = (id: number) => {
-    // Redireciona para a home com o ID do projeto
-    router.push(`/?id=${id}`)
+    // salva o id no localStorage
+    localStorage.setItem('selectedProjectId', id.toString())
+    // redireciona para a home e força reload completo
+    window.location.href = '/'
   }
   return (
     <main className="min-h-screen bg-white p-6">
