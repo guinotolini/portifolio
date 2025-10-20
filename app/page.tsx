@@ -1,5 +1,8 @@
 'use client'
 
+export const dynamic = 'force-dynamic'
+export const fetchCache = 'force-no-store'
+
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { useSearchParams } from 'next/navigation'
@@ -97,6 +100,7 @@ export default function Home() {
               src={projetos[currentImageIndex].capa}
               alt={projetos[currentImageIndex].titulo}
               fill
+              unoptimized
               className="object-cover transition-opacity duration-1000"
             />
           </div>
@@ -109,6 +113,7 @@ export default function Home() {
                     src={img}
                     alt={`${selectedProject.titulo} image ${index + 1}`}
                     fill
+                    unoptimized
                     className="object-cover"
                   />
                 </div>
