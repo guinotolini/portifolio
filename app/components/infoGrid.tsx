@@ -50,6 +50,7 @@ export default function InfoGrid() {
           <li>Rede Record</li>
           <li>Giraffas</li>
           <li>Tokio Marine Hall</li>
+          <li>Casas Bahia</li>
         </ul>
       </div>
 
@@ -86,14 +87,14 @@ export default function InfoGrid() {
             </Link>{' '}
             /{' '}
             <Link
-              href="https://www.linkedin.com/in/guinotolini/"
+              href="https://www.linkedin.com/in/guilherme-notolini-%E2%9C%8A%F0%9F%8F%BD-771526234/"
               target="_blank"
               className="hover:text-gray-800 underline"
             >
               LinkedIn
             </Link>
           </p>
-          <p className="font-inter text-gray-500 mt-2">WhatsApp: 12 98885-2050</p>
+          <Link href={"https://w.app/vmydph"} className="font-inter text-gray-500 hover:text-gray-800 underline mt-2">WhatsApp</Link>
         </div>
       </div>
     </div>

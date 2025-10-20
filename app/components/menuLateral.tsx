@@ -27,10 +27,10 @@ export default function Sidebar({ selectedId, showInfo, onProjectSelect, onInfoC
       
       <Link href={"galeria"} className='bg-gray-100 hover:bg-gray-200 text-sm font-inter text-black  px-3 py-2 rounded-full cursor-pointer'>Todos os projetos</Link>
       {/* Cabeçalho */}
-      <header onClick={() => window.location.reload()} className="text-center mt-10 mb-8 cursor-pointer">
-        <button className="text-md font-semibold font-doto uppercase tracking-[0.6vh] mt-8 text-black">Guilherme Notolini</button>
-        <p className="text-sm font-inter text-gray-400 mt-1">Designer | Diretor de Arte</p>
-      </header>
+      <Link href={"/"} onClick={() => window.location.reload()} className="text-center mb-8 cursor-pointer">
+        <h4 className="text-md font-semibold font-doto uppercase tracking-[0.6vh] mt-14 text-black">Guilherme Notolini</h4>
+        <p className="text-sm font-inter text-gray-400 mt-1 mb-14">Designer | Diretor de Arte | PCD </p>
+      </Link>
 
       {/* Seção Info */}
       {/* Regras:

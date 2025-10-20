@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
+import { useSearchParams } from 'next/navigation'
 import Sidebar from './components/menuLateral'
 import InfoGrid from './components/infoGrid'
 import GaleriaGrid from './components/galeriaGrid'
@@ -21,6 +22,21 @@ export default function Home() {
   const [showInfo, setShowInfo] = useState(false)
   const [showGallery, setShowGallery] = useState(false)
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
+
+  const searchParams = useSearchParams()
+  const projectId = searchParams.get('id')
+
+  // Se houver um ?id= na URL, abre o projeto correspondente automaticamente
+  useEffect(() => {
+    if (projectId) {
+      const project = projetos.find((p) => p.id === Number(projectId))
+      if (project) {
+        setSelectedProject(project)
+        setShowInfo(false)
+        setShowGallery(false)
+      }
+    }
+  }, [projectId])
 
   // Alterna automaticamente as capas dos projetos a cada 5s
   useEffect(() => {
@@ -75,7 +91,6 @@ export default function Home() {
         ) : showInfo ? (
           <InfoGrid />
         ) : !selectedProject ? (
-          // Slide automático das capas dos projetos
           <div className="w-full h-full relative rounded-2xl overflow-hidden transition-all duration-700">
             <Image
               key={projetos[currentImageIndex].id}
@@ -84,12 +99,8 @@ export default function Home() {
               fill
               className="object-cover transition-opacity duration-1000"
             />
-            {/* <div className="absolute bottom-4 left-4 bg-black/50 text-white px-4 py-2 rounded-lg backdrop-blur-sm">
-              <h2 className="text-lg font-semibold">{projetos[currentImageIndex].titulo}</h2>
-            </div> */}
           </div>
         ) : (
-          // Quando há um projeto selecionado, exibe as imagens dele
           <div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 h-full overflow-y-auto">
               {selectedProject.imagens.map((img, index) => (
