@@ -6,20 +6,7 @@ import Sidebar from './components/menuLateral'
 import InfoGrid from './components/infoGrid'
 import GaleriaGrid from './components/galeriaGrid'
 import projetosData from './data/projetos.json'
-
-// ---------- Tipos ----------
-
-interface Project {
-  id: number
-  titulo: string
-  descricao: string
-  miniatura: string
-  capa: string
-  blocos: {
-    layout: 'full' | 'grid' | 'mosaic' | 'vertical'
-    imagens: string[]
-  }[]
-}
+import type { Project } from './types/project'
 
 // ---------- Página principal ----------
 export default function Home() {

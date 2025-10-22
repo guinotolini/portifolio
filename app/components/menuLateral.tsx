@@ -4,15 +4,7 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import projetos from '@/app/data/projetos.json'
-
-interface Project {
-  id: number
-  titulo: string
-  descricao: string
-  miniatura: string
-  capa: string
-  imagens: string[]
-}
+import type { Project } from '@/app/types/project' // ✅ Importa o tipo unificado
 
 interface SidebarProps {
   selectedId: number | null
@@ -21,25 +13,39 @@ interface SidebarProps {
   onInfoClick: () => void
 }
 
-export default function Sidebar({ selectedId, showInfo, onProjectSelect, onInfoClick }: SidebarProps) {
+export default function Sidebar({
+  selectedId,
+  showInfo,
+  onProjectSelect,
+  onInfoClick,
+}: SidebarProps) {
   return (
     <aside className="h-full w-full md:w-[38vh] bg-white border-r border-gray-200 p-5 overflow-y-auto rounded-r-2xl md:rounded-none">
       
-      <Link href={"galeria"} className='bg-gray-100 hover:bg-gray-200 text-sm font-inter text-black  px-3 py-2 rounded-full cursor-pointer'>Todos os projetos</Link>
+      {/* Botão Todos os Projetos */}
+      <Link
+        href={'/galeria'}
+        className="bg-gray-100 hover:bg-gray-200 text-sm font-inter text-black px-3 py-2 rounded-full cursor-pointer"
+      >
+        Todos os projetos
+      </Link>
+
       {/* Cabeçalho */}
-      <Link href={"/"} onClick={() => window.location.reload()} className="text-center mb-8 cursor-pointer">
-        <h4 className="text-md font-semibold font-doto uppercase tracking-[0.6vh] mt-14 text-black">Guilherme Notolini</h4>
-        <p className="text-sm font-inter text-gray-400 mt-1 mb-14">Designer | Diretor de Arte (PCD) </p>
+      <Link
+        href={'/'}
+        onClick={() => window.location.reload()}
+        className="text-center mb-8 cursor-pointer block"
+      >
+        <h4 className="text-md font-semibold font-doto uppercase tracking-[0.6vh] mt-14 text-black">
+          Guilherme Notolini
+        </h4>
+        <p className="text-sm font-inter text-gray-400 mt-1 mb-14">
+          Designer | Diretor de Arte (PCD)
+        </p>
       </Link>
 
       {/* Seção Info */}
-      {/* Regras:
-          - Se showInfo === true  => Info fica visível no mobile (flex) e clicável (toggle).
-          - Se selectedId !== null => Info é escondido no mobile (porque um projeto está aberto).
-          - No desktop (sm+), Info sempre aparece.
-      */}
       <section
-        // mobile: mostrar somente se showInfo true; se selectedId existe, esconder no mobile.
         className={`mb-8 cursor-pointer flex flex-col ${
           showInfo ? 'flex' : selectedId ? 'hidden sm:flex' : 'flex'
         }`}
@@ -61,7 +67,7 @@ export default function Sidebar({ selectedId, showInfo, onProjectSelect, onInfoC
       <section>
         <h3
           className={`font-inter text-xs uppercase text-gray-500 mb-2 ${
-            (selectedId || showInfo) ? 'hidden sm:block' : ''
+            selectedId || showInfo ? 'hidden sm:block' : ''
           }`}
         >
           Projetos
@@ -69,15 +75,16 @@ export default function Sidebar({ selectedId, showInfo, onProjectSelect, onInfoC
 
         {projetos.map((project) => {
           const isSelected = selectedId === project.id
-          const hideOthers = Boolean(selectedId) || showInfo // se projeto selecionado ou showInfo aberto -> esconder os outros no mobile
+          const hideOthers = Boolean(selectedId) || showInfo
           const baseClass = hideOthers && !isSelected ? 'hidden sm:flex' : 'flex'
 
           return (
             <div
               key={project.id}
-              onClick={() => onProjectSelect(project)}
+              onClick={() => onProjectSelect(project as Project)}
               className={`${baseClass} items-center gap-3 bg-gray-100 p-3 rounded-xl cursor-pointer hover:bg-gray-200 transition mb-3`}
             >
+              {/* Miniatura */}
               <div className="flex-shrink-0 w-14 h-14 bg-white rounded-xl flex items-center justify-center">
                 <Image
                   src={project.miniatura}
@@ -87,9 +94,13 @@ export default function Sidebar({ selectedId, showInfo, onProjectSelect, onInfoC
                   className="object-contain rounded-xl"
                 />
               </div>
+
+              {/* Texto */}
               <div className="flex-1">
                 <div className="flex justify-between items-center">
-                  <h4 className="font-inter text-sm font-semibold text-black">{project.titulo}</h4>
+                  <h4 className="font-inter text-sm font-semibold text-black">
+                    {project.titulo}
+                  </h4>
                   <p className="font-inter text-xs text-gray-700">Ver Mais</p>
                 </div>
                 <p className="font-inter text-xs text-gray-500">{project.descricao}</p>
