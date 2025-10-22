@@ -8,12 +8,6 @@ import GaleriaGrid from './components/galeriaGrid'
 import projetosData from './data/projetos.json'
 
 // ---------- Tipos ----------
-type LayoutType = 'full' | 'grid' | 'mosaic' | 'vertical'
-
-interface ProjectBlock {
-  layout: LayoutType
-  imagens: string[]
-}
 
 interface Project {
   id: number
@@ -21,7 +15,10 @@ interface Project {
   descricao: string
   miniatura: string
   capa: string
-  blocos: ProjectBlock[]
+  blocos: {
+    layout: 'full' | 'grid' | 'mosaic' | 'vertical'
+    imagens: string[]
+  }[]
 }
 
 // ---------- Página principal ----------
