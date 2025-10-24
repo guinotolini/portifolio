@@ -8,11 +8,11 @@
     "blocos": [
       {
         "layout": "vertical",
-        "imagens": ["/images/KN2__01.jpg", "/images/KN2__02.jpg"]
+        "imagens": ["/images/KN2__01.mp4", "/images/KN2__02.jpg"]
       },
       {
         "layout": "vertical",
-        "imagens": ["/images/KN2__03.jpg", "/images/KN2__04.jpg"]
+        "imagens": ["/images/KN2__03.mp4", "/images/KN2__04.jpg"]
       },
       {
         "layout": "vertical",
