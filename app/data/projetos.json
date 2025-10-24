@@ -8,11 +8,11 @@
     "blocos": [
       {
         "layout": "vertical",
-        "imagens": ["/images/KN2__01.mp4", "/images/KN2__02.jpg"]
+        "imagens": ["/images/KN2__01.jpg", "/images/KN2__02.jpg"]
       },
       {
         "layout": "vertical",
-        "imagens": ["/images/KN2__03.mp4", "/images/KN2__04.jpg"]
+        "imagens": ["/images/KN2__03.jpg", "/images/KN2__04.jpg"]
       },
       {
         "layout": "vertical",
@@ -21,6 +21,84 @@
       {
         "layout": "full",
         "imagens": ["/images/KN2_07.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "titulo": "Google",
+    "descricao": "Direção de arte para os filmes de Black Friday",
+    "miniatura": "/miniaturas/google-02.png",
+    "capa": "/images/02.gif",
+    "blocos": [
+      {
+        "layout": "full",
+        "imagens": ["/images/02.gif"]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "titulo": "Maestra",
+    "descricao": "Construção de marca, papelaria, mídias sociais e web.",
+    "miniatura": "/miniaturas/maestra-06.jpg",
+    "capa": "/images/004.jpg",
+    "blocos": [
+      {
+        "layout": "full",
+        "imagens": ["/images/04.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "titulo": "Estadão",
+    "descricao": "Plataforma digital, posters e motion.",
+    "miniatura": "/miniaturas/estadão-04.png",
+    "capa": "/images/08.jpg",
+    "blocos": [
+      {
+        "layout": "full",
+        "imagens": ["/images/08.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "titulo": "Joy Crock",
+    "descricao": "Construção de marca para franquia.",
+    "miniatura": "/miniaturas/logos_joy crock.jpg",
+    "capa": "/images/05.jpg",
+    "blocos": [
+      {
+        "layout": "full",
+        "imagens": ["/images/05.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "titulo": "Huggies",
+    "descricao": "Mídias sociais.",
+    "miniatura": "/miniaturas/huggies-07.png",
+    "capa": "/images/06.jpg",
+    "blocos": [
+      {
+        "layout": "full",
+        "imagens": ["/images/06.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "titulo": "Casas Bahia",
+    "descricao": "Construção de guide de social e social (always on).",
+    "miniatura": "/miniaturas/Logos-03.png",
+    "capa": "/images/01.jpg",
+    "blocos": [
+      {
+        "layout": "full",
+        "imagens": ["/images/01.jpg"]
       }
     ]
   }
