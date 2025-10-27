@@ -110,22 +110,36 @@ export default function Home() {
               return (
                 <div
                   key={i}
-                  className="flex flex-col md:flex-row justify-center items-center gap-5 rounded-2xl overflow-hidden"
+                  className="flex flex-col md:flex-row justify-center items-stretch gap-5 rounded-2xl overflow-hidden"
                 >
-                  {bloco.imagens.map((img, index) => (
+                  {/* Renderiza o vídeo se existir */}
+                  {bloco.video && (
+                    <div className="relative w-full overflow-hidden rounded-2xl">
+                      <iframe
+                        src={`${bloco.video}?autoplay=1&loop=1&background=1&muted=1&quality=1080p`}
+                        title={`Vídeo do projeto ${project.titulo}`}
+                        className="w-full h-full"
+                        allow="autoplay; fullscreen; picture-in-picture"
+                        frameBorder="0"
+                      />
+                    </div>
+                  )}
+
+                  {/* Renderiza imagens normalmente */}
+                  {bloco.imagens?.map((img, index) => (
                     <div
                       key={index}
-                      className="relative flex justify-center items-center h-full w-screen"
+                      className="relative flex justify-center items-center w-full rounded-2xl overflow-hidden"
                     >
                       <Image
                         src={img}
                         alt={`${project.titulo} vertical ${index}`}
-                        width={1000}
-                        height={1200}
-                        unoptimized
-                        className="object-contain h-full w-full rounded-2xl"
+                        width={1080}
+                        height={1920}
+                        quality={100}
+                        className="object-cover w-full h-full rounded-2xl"
                       />
-                    </div>  
+                    </div>
                   ))}
                 </div>
               )

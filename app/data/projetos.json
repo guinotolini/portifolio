@@ -4,15 +4,17 @@
     "titulo": "KN2",
     "descricao": "Construção de marca, embalagem e social mídia",
     "miniatura": "/miniaturas/kn2.png",
-    "capa": "/images/KN2__02.jpg",
+    "capa": "/images/capa-03.jpg",
     "blocos": [
       {
         "layout": "vertical",
-        "imagens": ["/images/KN2__01.jpg", "/images/KN2__02.jpg"]
+        "video": "https://player.vimeo.com/video/1130370038",
+        "imagens": ["/images/KN2__02.jpg"]
       },
       {
         "layout": "vertical",
-        "imagens": ["/images/KN2__03.jpg", "/images/KN2__04.jpg"]
+        "video": "https://player.vimeo.com/video/1130992962",
+        "imagens": ["/images/KN2__04.jpg"]
       },
       {
         "layout": "vertical",
@@ -26,19 +28,6 @@
   },
   {
     "id": 2,
-    "titulo": "Google",
-    "descricao": "Direção de arte para os filmes de Black Friday",
-    "miniatura": "/miniaturas/google-02.png",
-    "capa": "/images/02.gif",
-    "blocos": [
-      {
-        "layout": "full",
-        "imagens": ["/images/02.gif"]
-      }
-    ]
-  },
-  {
-    "id": 3,
     "titulo": "Maestra",
     "descricao": "Construção de marca, papelaria, mídias sociais e web.",
     "miniatura": "/miniaturas/maestra-06.jpg",
@@ -50,6 +39,19 @@
       }
     ]
   },
+  {
+    "id": 3,
+    "titulo": "Google",
+    "descricao": "Direção de arte para os filmes de Black Friday",
+    "miniatura": "/miniaturas/google-02.png",
+    "capa": "/images/02.gif",
+    "blocos": [
+      {
+        "layout": "full",
+        "imagens": ["/images/02.gif"]
+      }
+    ]
+  },  
   {
     "id": 4,
     "titulo": "Estadão",

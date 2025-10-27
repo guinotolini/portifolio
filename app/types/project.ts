@@ -1,6 +1,7 @@
 export interface ProjectBlock {
   layout: 'full' | 'grid' | 'mosaic' | 'vertical'
   imagens: string[]
+  video?: string
 }
 
 export interface Project {
