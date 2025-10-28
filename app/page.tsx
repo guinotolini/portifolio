@@ -112,32 +112,40 @@ export default function Home() {
                   key={i}
                   className="flex flex-col md:flex-row justify-center items-stretch gap-5 rounded-2xl overflow-hidden"
                 >
-                  {/* Renderiza o vídeo se existir */}
+                  {/* --- vídeo (com ratio) --- */}
                   {bloco.video && (
-                    <div className="relative w-full overflow-hidden rounded-2xl">
-                      <iframe
-                        src={`${bloco.video}?autoplay=1&loop=1&background=1&muted=1&quality=1080p`}
-                        title={`Vídeo do projeto ${project.titulo}`}
-                        className="w-full h-full"
-                        allow="autoplay; fullscreen; picture-in-picture"
-                        frameBorder="0"
-                      />
+                    <div className="w-full md:w-1/2 overflow-hidden rounded-2xl">
+                      {/* Aplica o ratio apenas no vídeo */}
+                      <div
+                        className="relative w-full h-0 md:pb-0 md:h-[90vh]"
+                        style={{
+                          paddingBottom: `${bloco.ratio ? bloco.ratio : 133.333}%`, // padrão 3:4
+                        }}
+                      >
+                        <iframe
+                          src={`${bloco.video}?autoplay=1&loop=1&background=1&muted=1&controls=0`}
+                          title={`Vídeo do projeto ${project.titulo}`}
+                          className="absolute inset-0 w-full h-full"
+                          allow="autoplay; fullscreen; picture-in-picture"
+                          frameBorder="0"
+                        />
+                      </div>
                     </div>
                   )}
 
-                  {/* Renderiza imagens normalmente */}
-                  {bloco.imagens?.map((img, index) => (
+                  {/* --- imagens (sem ratio) --- */}
+                  {bloco.imagens?.map((img, idx) => (
                     <div
-                      key={index}
-                      className="relative flex justify-center items-center w-full rounded-2xl overflow-hidden"
+                      key={idx}
+                      className="w-full md:w-1/2 overflow-hidden rounded-2xl flex justify-center items-center"
                     >
                       <Image
                         src={img}
-                        alt={`${project.titulo} vertical ${index}`}
+                        alt={`${project.titulo} vertical ${idx}`}
                         width={1080}
                         height={1920}
-                        quality={100}
-                        className="object-cover w-full h-full rounded-2xl"
+                        unoptimized
+                        className="object-contain w-full h-full rounded-2xl"
                       />
                     </div>
                   ))}
