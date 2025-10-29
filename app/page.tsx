@@ -53,17 +53,37 @@ export default function Home() {
     return (
       <div className="flex flex-col gap-5">
         {project.blocos.map((bloco, i) => {
-          switch (bloco.layout) {
+          switch (bloco.layout) {            
             case 'full':
               return (
-                <div key={i} className="relative w-full h-[100vh] rounded-2xl overflow-hidden">
-                  <Image
-                    src={bloco.imagens[0]}
-                    alt={`${project.titulo} bloco ${i}`}
-                    fill
-                    unoptimized
-                    className="object-cover"
-                  />
+                <div
+                  key={i}
+                  className="relative w-full h-[100vh] rounded-2xl overflow-hidden bg-black"
+                >
+                  {bloco.video ? (
+                    <div className="absolute inset-0 overflow-hidden">
+                      <iframe
+                        src={`${bloco.video}${
+                          bloco.video.includes('?') ? '&' : '?'
+                        }autoplay=1&loop=1&muted=1&background=1&controls=0&byline=0&portrait=0&title=0`}
+                        title={`Vídeo do projeto ${project.titulo}`}
+                        allow="autoplay; fullscreen; picture-in-picture"
+                        frameBorder="0"
+                        className="absolute inset-0 w-full h-full md:w-[120%] md:h-[120%] md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 md:scale-110 object-cover"
+                        style={{
+                          objectFit: 'cover',
+                        }}
+                      />
+                    </div>
+                  ) : (
+                    <Image
+                      src={bloco.imagens[0]}
+                      alt={`${project.titulo} bloco ${i}`}
+                      fill
+                      unoptimized
+                      className="object-cover"
+                    />
+                  )}
                 </div>
               )
 
@@ -112,31 +132,49 @@ export default function Home() {
                   key={i}
                   className="flex flex-col md:flex-row justify-center items-stretch gap-5 rounded-2xl overflow-hidden"
                 >
-                  {/* --- vídeo (com ratio) --- */}
-                  {bloco.video && (
-                    <div className="w-full md:w-1/2 overflow-hidden rounded-2xl">
-                      {/* Aplica o ratio apenas no vídeo */}
-                      <div
-                        className="relative w-full h-0 md:pb-0 md:h-[90vh]"
-                        style={{
-                          paddingBottom: `${bloco.ratio ? bloco.ratio : 133.333}%`, // padrão 3:4
-                        }}
-                      >
-                        <iframe
-                          src={`${bloco.video}?autoplay=1&loop=1&background=1&muted=1&controls=0`}
-                          title={`Vídeo do projeto ${project.titulo}`}
-                          className="absolute inset-0 w-full h-full"
-                          allow="autoplay; fullscreen; picture-in-picture"
-                          frameBorder="0"
-                        />
-                      </div>
-                    </div>
-                  )}
+                  {/* --- vídeos (um ou vários) --- */}
+                  {bloco.video &&
+                    (Array.isArray(bloco.video)
+                      ? bloco.video.map((videoUrl, idx) => (
+                        <div
+                          key={`video-${idx}`}
+                          className="w-full md:w-1/2 overflow-hidden rounded-2xl"
+                        >
+                          <div
+                            className="relative w-full h-0 md:pb-0 md:h-[90vh]"
+                            style={{ paddingBottom: '133.333%' }} // 3:4 para mobile
+                          >
+                            <iframe
+                              src={`${videoUrl}?autoplay=1&loop=1&background=1&muted=1&controls=0`}
+                              title={`Vídeo ${idx + 1} do projeto ${project.titulo}`}
+                              className="absolute inset-0 w-full h-full"
+                              allow="autoplay; fullscreen; picture-in-picture"
+                              frameBorder="0"
+                            />
+                          </div>
+                        </div>
+                      ))
+                    : (
+                        <div className="w-full md:w-1/2 overflow-hidden rounded-2xl">
+                          <div
+                            className="relative w-full h-0 md:pb-0 md:h-[90vh]"
+                            style={{ paddingBottom: '133.333%' }}
+                          >
+                            <iframe
+                              src={`${bloco.video}?autoplay=1&loop=1&background=1&muted=1&controls=0`}
+                              title={`Vídeo do projeto ${project.titulo}`}
+                              className="absolute inset-0 w-full h-full"
+                              allow="autoplay; fullscreen; picture-in-picture"
+                              frameBorder="0"
+                            />
+                          </div>
+                        </div>
+                      ))}
 
-                  {/* --- imagens (sem ratio) --- */}
+                  {/* --- imagens (sempre renderizam) --- */}
                   {bloco.imagens?.map((img, idx) => (
                     <div
-                      key={idx}
+                      key={`img-${idx}`}
                       className="w-full md:w-1/2 overflow-hidden rounded-2xl flex justify-center items-center"
                     >
                       <Image

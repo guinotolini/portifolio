@@ -38,21 +38,17 @@
        "layout": "vertical",
        "imagens": ["/images/Maestra_01.jpg", "/images/Maestra_02.jpg"]
       },
-       {
+      {
         "layout": "full",
-        "vídeo": ["https://player.vimeo.com/video/1131445812"]
-      
+        "video": ["https://player.vimeo.com/video/1131445812"]      
       },
       {
         "layout": "vertical",
-        "vídeo":["https://player.vimeo.com/video/1131397803", "https://player.vimeo.com/video/1131397938"]
-      },
-      
-
-    {
+        "video":["https://player.vimeo.com/video/1131397803", "https://player.vimeo.com/video/1131397938"]
+      },      
+      {
         "layout": "full",
-        "imagens": ["/imagens/Maestra)06.jpg"]
-      
+        "imagens": ["/images/Maestra_06.jpg"]
       }
     ]
   },
