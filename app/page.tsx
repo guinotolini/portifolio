@@ -58,31 +58,36 @@ export default function Home() {
               return (
                 <div
                   key={i}
-                  className="relative w-full h-[100vh] rounded-2xl overflow-hidden bg-black"
+                  className="relative w-full flex justify-center items-center bg-white rounded-2xl overflow-hidden"
                 >
                   {bloco.video ? (
-                    <div className="absolute inset-0 overflow-hidden">
+                    <div
+                      className="relative w-full max-w-7xl aspect-video overflow-hidden rounded-2xl"
+                    >
                       <iframe
-                        src={`${bloco.video}${
-                          bloco.video.includes('?') ? '&' : '?'
+                        src={`${Array.isArray(bloco.video) ? bloco.video[0] : bloco.video}${
+                          (Array.isArray(bloco.video) ? bloco.video[0] : bloco.video).includes('?')
+                            ? '&'
+                            : '?'
                         }autoplay=1&loop=1&muted=1&background=1&controls=0&byline=0&portrait=0&title=0`}
                         title={`Vídeo do projeto ${project.titulo}`}
                         allow="autoplay; fullscreen; picture-in-picture"
                         frameBorder="0"
-                        className="absolute inset-0 w-full h-full md:w-[120%] md:h-[120%] md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 md:scale-110 object-cover"
-                        style={{
-                          objectFit: 'cover',
-                        }}
+                        className="absolute inset-0 w-full h-full object-cover"
                       />
                     </div>
                   ) : (
-                    <Image
-                      src={bloco.imagens[0]}
-                      alt={`${project.titulo} bloco ${i}`}
-                      fill
-                      unoptimized
-                      className="object-cover"
-                    />
+                    <div
+                      className="relative w-[1625px] aspect-video overflow-hidden rounded-2xl"
+                    >
+                      <Image
+                        src={bloco.imagens[0]}
+                        alt={`${project.titulo} bloco ${i}`}
+                        fill
+                        unoptimized
+                        className="object-cover justify-center items-center"
+                      />
+                    </div>
                   )}
                 </div>
               )
