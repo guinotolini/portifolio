@@ -61,7 +61,7 @@
     "blocos": [
       {
         "layout": "full",
-        "vídeo": ["https://player.vimeo.com/video/1132586140"]
+        "video": ["https://player.vimeo.com/video/1132586140"]
       },
       { 
        "layout": "vertical",
