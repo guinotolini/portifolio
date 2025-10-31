@@ -64,7 +64,12 @@
     "blocos": [
       {
         "layout": "full",
-        "imagens": ["https://vimeo.com/1132586140?fl=pl&fe=sh"]
+        "vídeo": ["https://player.vimeo.com/vídeo/1132586140"]
+      },
+      { 
+       "layout": "vertical",
+       "imagens": ["/images/Maestra_01.jpg", "/images/Maestra_02.jpg"]
+
       }
     ]
   },  
