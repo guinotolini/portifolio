@@ -13,7 +13,8 @@
       },
       {
         "layout": "vertical",
-        "video": "https://player.vimeo.com/video/1130992962",
+        "video": "https://player.vimeo.com/video/1131782418",
+        "ratio": 133.49,
         "imagens": ["/images/KN2__04.jpg"]
       },
       {
@@ -37,21 +38,17 @@
        "layout": "vertical",
        "imagens": ["/images/Maestra_01.jpg", "/images/Maestra_02.jpg"]
       },
-       {
+      {
         "layout": "full",
-        "vídeo": ["https://vimeo.com/1131445812?fl=ip&fe=ec"]
-      
+        "video": ["https://player.vimeo.com/video/1131445812"]      
       },
       {
         "layout": "vertical",
-        "vídeo":["https://player.vimeo.com/video/1131397803", "https://player.vimeo.com/video/1131397938"]
-      },
-      
-
-    {
+        "video":["https://player.vimeo.com/video/1131397803", "https://player.vimeo.com/video/1131397938"]
+      },      
+      {
         "layout": "full",
-        "imagens": ["/imagens/Maestra)06.jpg"]
-      
+        "imagens": ["/images/Maestra_006.jpg"]
       }
     ]
   },

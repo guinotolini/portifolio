@@ -53,17 +53,42 @@ export default function Home() {
     return (
       <div className="flex flex-col gap-5">
         {project.blocos.map((bloco, i) => {
-          switch (bloco.layout) {
+          switch (bloco.layout) {            
             case 'full':
               return (
-                <div key={i} className="relative w-full h-[100vh] rounded-2xl overflow-hidden">
-                  <Image
-                    src={bloco.imagens[0]}
-                    alt={`${project.titulo} bloco ${i}`}
-                    fill
-                    unoptimized
-                    className="object-cover"
-                  />
+                <div
+                  key={i}
+                  className="relative w-full flex justify-center items-center bg-white rounded-2xl overflow-hidden"
+                >
+                  {bloco.video ? (
+                    <div
+                      className="relative w-full max-w-7xl aspect-video overflow-hidden rounded-2xl"
+                    >
+                      <iframe
+                        src={`${Array.isArray(bloco.video) ? bloco.video[0] : bloco.video}${
+                          (Array.isArray(bloco.video) ? bloco.video[0] : bloco.video).includes('?')
+                            ? '&'
+                            : '?'
+                        }autoplay=1&loop=1&muted=1&background=1&controls=0&byline=0&portrait=0&title=0`}
+                        title={`Vídeo do projeto ${project.titulo}`}
+                        allow="autoplay; fullscreen; picture-in-picture"
+                        frameBorder="0"
+                        className="absolute inset-0 w-full h-full object-cover"
+                      />
+                    </div>
+                  ) : (
+                    <div
+                      className="relative w-[1625px] aspect-video overflow-hidden rounded-2xl"
+                    >
+                      <Image
+                        src={bloco.imagens[0]}
+                        alt={`${project.titulo} bloco ${i}`}
+                        fill
+                        unoptimized
+                        className="object-cover justify-center items-center"
+                      />
+                    </div>
+                  )}
                 </div>
               )
 
@@ -112,32 +137,58 @@ export default function Home() {
                   key={i}
                   className="flex flex-col md:flex-row justify-center items-stretch gap-5 rounded-2xl overflow-hidden"
                 >
-                  {/* Renderiza o vídeo se existir */}
-                  {bloco.video && (
-                    <div className="relative w-full overflow-hidden rounded-2xl">
-                      <iframe
-                        src={`${bloco.video}?autoplay=1&loop=1&background=1&muted=1&quality=1080p`}
-                        title={`Vídeo do projeto ${project.titulo}`}
-                        className="w-full h-full"
-                        allow="autoplay; fullscreen; picture-in-picture"
-                        frameBorder="0"
-                      />
-                    </div>
-                  )}
+                  {/* --- vídeos (um ou vários) --- */}
+                  {bloco.video &&
+                    (Array.isArray(bloco.video)
+                      ? bloco.video.map((videoUrl, idx) => (
+                        <div
+                          key={`video-${idx}`}
+                          className="w-full md:w-1/2 overflow-hidden rounded-2xl"
+                        >
+                          <div
+                            className="relative w-full h-0 md:pb-0 md:h-[90vh]"
+                            style={{ paddingBottom: '133.333%' }} // 3:4 para mobile
+                          >
+                            <iframe
+                              src={`${videoUrl}?autoplay=1&loop=1&background=1&muted=1&controls=0`}
+                              title={`Vídeo ${idx + 1} do projeto ${project.titulo}`}
+                              className="absolute inset-0 w-full h-full"
+                              allow="autoplay; fullscreen; picture-in-picture"
+                              frameBorder="0"
+                            />
+                          </div>
+                        </div>
+                      ))
+                    : (
+                        <div className="w-full md:w-1/2 overflow-hidden rounded-2xl">
+                          <div
+                            className="relative w-full h-0 md:pb-0 md:h-[90vh]"
+                            style={{ paddingBottom: '133.333%' }}
+                          >
+                            <iframe
+                              src={`${bloco.video}?autoplay=1&loop=1&background=1&muted=1&controls=0`}
+                              title={`Vídeo do projeto ${project.titulo}`}
+                              className="absolute inset-0 w-full h-full"
+                              allow="autoplay; fullscreen; picture-in-picture"
+                              frameBorder="0"
+                            />
+                          </div>
+                        </div>
+                      ))}
 
-                  {/* Renderiza imagens normalmente */}
-                  {bloco.imagens?.map((img, index) => (
+                  {/* --- imagens (sempre renderizam) --- */}
+                  {bloco.imagens?.map((img, idx) => (
                     <div
-                      key={index}
-                      className="relative flex justify-center items-center w-full rounded-2xl overflow-hidden"
+                      key={`img-${idx}`}
+                      className="w-full md:w-1/2 overflow-hidden rounded-2xl flex justify-center items-center"
                     >
                       <Image
                         src={img}
-                        alt={`${project.titulo} vertical ${index}`}
+                        alt={`${project.titulo} vertical ${idx}`}
                         width={1080}
                         height={1920}
-                        quality={100}
-                        className="object-cover w-full h-full rounded-2xl"
+                        unoptimized
+                        className="object-contain w-full h-full rounded-2xl"
                       />
                     </div>
                   ))}
