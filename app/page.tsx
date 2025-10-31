@@ -19,7 +19,7 @@ export default function Home() {
 
   // Restaura projeto selecionado ao carregar
   useEffect(() => {
-    const storedId = localStorage.getItem('selectedProjectId')
+    const storedId = localStorage.getItem('selectedProjectId') 
     if (storedId) {
       const project = projetos.find((p) => p.id === Number(storedId))
       if (project) {

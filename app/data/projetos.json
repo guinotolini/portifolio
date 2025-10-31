@@ -57,22 +57,22 @@
   },
   {
     "id": 3,
-    "titulo": "Google",
-    "descricao": "Direção de arte para os filmes de Black Friday",
-    "miniatura": "/miniaturas/google-02.png",
+    "titulo": "Estadão",
+    "descricao": "Plataforma digital, posters e motion.",
+    "miniatura": "/miniaturas/estadão-04.png",
     "capa": "/images/02.gif",
     "blocos": [
       {
         "layout": "full",
-        "imagens": ["/images/02.gif"]
+        "imagens": ["https://vimeo.com/1132586140?fl=pl&fe=sh"]
       }
     ]
   },  
   {
     "id": 4,
-    "titulo": "Estadão",
-    "descricao": "Plataforma digital, posters e motion.",
-    "miniatura": "/miniaturas/estadão-04.png",
+    "titulo": "Google",
+    "descricao": "Direção de arte para os filmes de Black Friday",
+    "miniatura": "/miniaturas/google-02.png",
     "capa": "/images/08.jpg",
     "blocos": [
       {
