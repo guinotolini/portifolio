@@ -35,17 +35,20 @@
     "capa": "/images/004.jpg",
     "blocos": [
       {
-       "layout": "vertical",
-       "imagens": ["/images/Maestra_01.jpg", "/images/Maestra_02.jpg"]
+        "layout": "vertical",
+        "imagens": ["/images/Maestra_01.jpg", "/images/Maestra_02.jpg"]
       },
       {
         "layout": "full",
-        "video": ["https://player.vimeo.com/video/1131445812"]      
+        "video": ["https://player.vimeo.com/video/1131445812"]
       },
       {
         "layout": "vertical",
-        "video":["https://player.vimeo.com/video/1131397803", "https://player.vimeo.com/video/1131397938"]
-      },      
+        "video": [
+          "https://player.vimeo.com/video/1131397803",
+          "https://player.vimeo.com/video/1131397938"
+        ]
+      },
       {
         "layout": "full",
         "imagens": ["/images/Maestra_006.jpg"]
@@ -61,15 +64,23 @@
     "blocos": [
       {
         "layout": "full",
-        "vídeo": ["https://player.vimeo.com/video/1132586140"]
+        "video": ["https://player.vimeo.com/video/1132839483"]
       },
-      { 
-       "layout": "vertical",
-       "imagens": ["/images/Maestra_01.jpg", "/images/Maestra_02.jpg"]
-
+      {
+        "layout": "vertical",
+        "imagens": ["/images/02.jpg", "/images/03.jpg"]
+      },
+      {
+        "layout": "full",
+        "video": ["https://player.vimeo.com/video/1132840738"]
+      },
+      
+      {
+        "layout": "vertical",
+        "imagens": ["/images/Maestra_01.jpg", "/images/Maestra_02.jpg"]
       }
     ]
-  },  
+  },
   {
     "id": 4,
     "titulo": "Google",
