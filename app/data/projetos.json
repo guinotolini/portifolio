@@ -60,20 +60,15 @@
     "capa": "/images/02.gif",
     "blocos": [
       {
-    "layout": "full",
-    "video": ["https://player.vimeo.com/video/1132839483"]
-  },
-  {
-    "layout": "vertical",
-    "imagens": ["/images/02.jpg", "/images/03.jpg"]
-    
-  },
-  {
-    "layout": "full",
-    "video": ["https://player.vimeo.com/video/1132840738"]
-  }
-]
+        "layout": "full",
+        "vídeo": ["https://player.vimeo.com/video/1132586140"]
+      },
+      { 
+       "layout": "vertical",
+       "imagens": ["/images/Maestra_01.jpg", "/images/Maestra_02.jpg"]
 
+      }
+    ]
   },  
   {
     "id": 4,
