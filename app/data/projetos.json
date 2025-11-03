@@ -9,17 +9,17 @@
       {
         "layout": "vertical",
         "video": "https://player.vimeo.com/video/1130370038",
-        "imagens": ["/images/KN2__02.jpg"]
+        "imagens": ["/images/KN2_02.jpg"]
       },
       {
         "layout": "vertical",
         "video": "https://player.vimeo.com/video/1131782418",
         "ratio": 133.49,
-        "imagens": ["/images/KN2__04.jpg"]
+        "imagens": ["/images/KN2_04.jpg"]
       },
       {
         "layout": "vertical",
-        "imagens": ["/images/KN2__05.jpg", "/images/KN2__06.jpg"]
+        "imagens": ["/images/KN2_05.jpg", "/images/KN2_06.jpg"]
       },
       {
         "layout": "full",
@@ -74,7 +74,6 @@
         "layout": "full",
         "video": ["https://player.vimeo.com/video/1132840738"]
       },
-      
       {
         "layout": "vertical",
         "imagens": ["/images/005.jpg", "/images/006.jpg"]
@@ -83,23 +82,29 @@
   },
   {
     "id": 4,
-    "titulo": "Google",
-    "descricao": "Direção de arte para os filmes de Black Friday",
-    "miniatura": "/miniaturas/google-02.png",
-    "capa": "/images/08.jpg",
+    "titulo": "Joy Crock",
+    "descricao": "Construção de marca para franquia.",
+    "miniatura": "/miniaturas/Joy Crock-05.png",
+    "capa": "/images/05.jpg",
     "blocos": [
       {
         "layout": "full",
-        "imagens": ["/images/08.jpg"]
+        "imagens": ["/images/05.jpg"]
+      },
+      {
+        "layout": "vertical",
+        "video": "https://player.vimeo.com/video/1133299194",
+        "ratio": 133.49,
+        "imagens": ["/images/Joy Crock 02.jpg"]
       }
     ]
   },
   {
     "id": 5,
-    "titulo": "Joy Crock",
-    "descricao": "Construção de marca para franquia.",
-    "miniatura": "/miniaturas/logos_joy crock.jpg",
-    "capa": "/images/05.jpg",
+    "titulo": "Em breve",
+    "descricao": "",
+    "miniatura": "/miniaturas/Em breve.jpg",
+    "capa": "",
     "blocos": [
       {
         "layout": "full",
@@ -109,9 +114,9 @@
   },
   {
     "id": 6,
-    "titulo": "Huggies",
-    "descricao": "Mídias sociais.",
-    "miniatura": "/miniaturas/huggies-07.png",
+    "titulo": "Em breve",
+    "descricao": "",
+    "miniatura": "/miniaturas/Em breve.jpg",
     "capa": "/images/06.jpg",
     "blocos": [
       {
@@ -122,9 +127,9 @@
   },
   {
     "id": 7,
-    "titulo": "Casas Bahia",
-    "descricao": "Construção de guide de social e social (always on).",
-    "miniatura": "/miniaturas/Logos-03.png",
+    "titulo": "Em breve",
+    "descricao": "",
+    "miniatura": "/miniaturas/Em breve.jpg",
     "capa": "/images/01.jpg",
     "blocos": [
       {
