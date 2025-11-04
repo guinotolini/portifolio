@@ -93,9 +93,13 @@
       },
       {
         "layout": "vertical",
-        "video": "https://player.vimeo.com/video/1133299194",
+        "video": "https://player.vimeo.com/video/1133309312",
         "ratio": 133.49,
         "imagens": ["/images/Joy Crock 02.jpg"]
+      },
+      {
+        "layout": "vertical",
+        "imagens": ["/images/Joy Crock 04.jpg", "/images/Joy Crock 05.jpg"]
       }
     ]
   },
