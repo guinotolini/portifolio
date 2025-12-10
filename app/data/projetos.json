@@ -8,12 +8,12 @@
     "blocos": [
       {
         "layout": "vertical",
-        "video": "https://player.vimeo.com/video/1130370038",
+        "video": ["https://player.vimeo.com/video/1130370038"],
         "imagens": ["/images/KN2_02.jpg"]
       },
       {
         "layout": "vertical",
-        "video": "https://player.vimeo.com/video/1131782418",
+        "video": ["https://player.vimeo.com/video/1131782418"],
         "ratio": 133.49,
         "imagens": ["/images/KN2_04.jpg"]
       },
@@ -35,12 +35,21 @@
     "capa": "/images/004.jpg",
     "blocos": [
       {
+        "layout": "full",
+        "imagens": ["/images/Maestra_00.jpg"]
+      },
+      {
         "layout": "vertical",
-        "imagens": ["/images/Maestra_01.jpg", "/images/Maestra_02.jpg"]
+        "video": ["https://player.vimeo.com/video/1145336593"],
+        "imagens": ["/images/Maestra_01.jpg"]
       },
       {
         "layout": "full",
         "video": ["https://player.vimeo.com/video/1131445812"]
+      },
+      {
+        "layout": "full",
+        "imagens": ["/images/Maestra_06.jpg"]
       },
       {
         "layout": "vertical",
@@ -51,7 +60,7 @@
       },
       {
         "layout": "full",
-        "imagens": ["/images/Maestra_006.jpg"]
+        "imagens": ["/images/Maestra_07.jpg"]
       }
     ]
   },
@@ -93,7 +102,7 @@
       },
       {
         "layout": "vertical",
-        "video": "https://player.vimeo.com/video/1133309312",
+        "video": ["https://player.vimeo.com/video/1133309312"],
         "ratio": 133.49,
         "imagens": ["/images/Joy Crock 02.jpg"]
       },
