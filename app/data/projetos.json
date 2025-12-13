@@ -73,19 +73,35 @@
     "blocos": [
       {
         "layout": "full",
-        "video": ["https://player.vimeo.com/video/1132839483"]
-      },
-      {
-        "layout": "vertical",
-        "imagens": ["/images/02.jpg", "/images/03.jpg"]
+        "imagens": ["/images/00-estadao.jpg"]
       },
       {
         "layout": "full",
-        "video": ["https://player.vimeo.com/video/1132840738"]
+        "imagens": ["/images/01-estadao.jpg"]
+      },
+      {
+        "layout": "full",
+        "imagens": ["/images/02-estadao.jpg"]
+      },
+      {
+        "layout": "full",
+        "imagens": ["/images/03-estadao.jpg"]
+      },
+      {
+        "layout": "full",
+        "imagens": ["/images/04-estadao.jpg"]
+      },
+      {
+        "layout": "full",
+        "imagens": ["/images/05-estadao.jpg"]
       },
       {
         "layout": "vertical",
-        "imagens": ["/images/005.jpg", "/images/006.jpg"]
+        "imagens": ["/images/06-estadao.jpg", "/images/07-estadao.jpg"]
+      },
+      {
+        "layout": "full",
+        "imagens": ["/images/08-estadao.jpg"]
       }
     ]
   },
