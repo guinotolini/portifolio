@@ -137,15 +137,31 @@
     "blocos": [
       {
         "layout": "full",
-        "imagens": ["/images/05.jpg"]
+        "imagens": ["/images/Huggies_00.gif"]
+      },
+      {
+        "layout": "full",
+        "imagens": ["/images/Huggies_01.jpg"]
+      },
+      {
+        "layout": "full",
+        "imagens": ["/images/Huggies_02.jpg"]
+      },
+      {
+        "layout": "full",
+        "imagens": ["/images/Huggies_03.jpg"]
+      },
+      {
+        "layout": "full",
+        "imagens": ["/images/Huggies_04.jpg"]
       }
     ]
   },
   {
     "id": 6,
-    "titulo": "Em breve",
+    "titulo": "The Body shop",
     "descricao": "",
-    "miniatura": "/miniaturas/Em-breve.jpg",
+    "miniatura": "/miniaturas/the-body-shop.jpeg",
     "capa": "/images/06.jpg",
     "blocos": [
       {
