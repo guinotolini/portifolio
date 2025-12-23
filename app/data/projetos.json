@@ -131,7 +131,7 @@
   {
     "id": 5,
     "titulo": "Huggies",
-    "descricao": "",
+    "descricao": "/images/huggies_00.gif",
     "miniatura": "/miniaturas/huggies-07.png",
     "capa": "",
     "blocos": [
@@ -166,20 +166,48 @@
     "blocos": [
       {
         "layout": "full",
-        "imagens": ["/images/06.jpg"]
+        "video": ["https://player.vimeo.com/video/1148326255"]
+      },
+      {
+        "layout": "full",
+        "imagens": ["/images/tbs_01.jpg"]
+      },
+      {
+        "layout": "full",
+        "imagens": ["/images/tbs_02.jpg"]
+      },
+      {
+        "layout": "full",
+        "imagens": ["/images/tbs_03.jpg"]
       }
     ]
   },
   {
     "id": 7,
-    "titulo": "Em breve",
-    "descricao": "",
-    "miniatura": "/miniaturas/Em-breve.jpg",
+    "titulo": "Casas Bahia",
+    "descricao": "Social",
+    "miniatura": "/miniaturas/logo_cb.jpg",
     "capa": "/images/01.jpg",
     "blocos": [
+     {
+        "layout": "full",
+        "video": ["https://player.vimeo.com/video/1148924140"]
+      },
+      {
+        "layout": "vertical",
+        "video": [
+          "https://player.vimeo.com/video/1148912828",
+          "https://player.vimeo.com/video/1148916923"
+        ]
+      },
       {
         "layout": "full",
-        "imagens": ["/images/01.jpg"]
+        "video": ["https://player.vimeo.com/video/1148917312"]
+      },
+      
+      {
+        "layout": "full",
+        "imagens": ["/images/cb_05.jpg"] 
       }
     ]
   }
