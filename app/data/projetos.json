@@ -69,7 +69,7 @@
     "titulo": "Estadão",
     "descricao": "Plataforma digital, posters e motion.",
     "miniatura": "/miniaturas/estadao-04.png",
-    "capa": "/images/02.gif",
+    "capa": "/images/estadao_capa.jpg",
     "blocos": [
       {
         "layout": "full",
@@ -131,9 +131,9 @@
   {
     "id": 5,
     "titulo": "Huggies",
-    "descricao": "/images/huggies_00.gif",
+    "descricao": "social",
     "miniatura": "/miniaturas/huggies-07.png",
-    "capa": "",
+    "capa": "/images/Huggies_00.gif",
     "blocos": [
       {
         "layout": "full",
@@ -162,7 +162,7 @@
     "titulo": "The Body shop",
     "descricao": "",
     "miniatura": "/miniaturas/the-body-shop.jpeg",
-    "capa": "/images/06.jpg",
+    "capa": "/images/tbs_capa.jpg",
     "blocos": [
       {
         "layout": "full",
