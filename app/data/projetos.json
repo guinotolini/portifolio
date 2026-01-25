@@ -8,8 +8,9 @@
     "blocos": [
       {
         "layout": "vertical",
-        "imagens": ["/images/KN2_00.jpg", "/images/KN2_01.jpg"]
-      },
+        "video": ["https://player.vimeo.com/video/1158162085"],
+        "imagens": ["/images/KN2_01.jpg"]
+         },
       {
         "layout": "vertical",
         "imagens": ["/images/KN2_02.jpg", "/images/KN2_03.jpg"]
