@@ -8,22 +8,38 @@
     "blocos": [
       {
         "layout": "vertical",
-        "video": ["https://player.vimeo.com/video/1130370038"],
-        "imagens": ["/images/KN2_02.jpg"]
+        "imagens": ["/images/KN2_00.jpg", "/images/KN2_01.jpg"]
+      },
+      {
+        "layout": "vertical",
+        "imagens": ["/images/KN2_02.jpg", "/images/KN2_03.jpg"]
+      },
+      {
+        "layout": "full",
+        "imagens": ["/images/KN2_04.jpg"]
+      },
+      {
+        "layout": "full",
+        "imagens": ["/images/KN2_05.jpg"]
       },
       {
         "layout": "vertical",
         "video": ["https://player.vimeo.com/video/1131782418"],
         "ratio": 133.49,
-        "imagens": ["/images/KN2_04.jpg"]
+        "imagens": ["/images/KN2_06.jpg"]
       },
       {
         "layout": "vertical",
-        "imagens": ["/images/KN2_05.jpg", "/images/KN2_06.jpg"]
+        "video": ["https://player.vimeo.com/video/1130370038"],
+        "imagens": ["/images/KN2_09.jpg"]
+      },
+      {
+        "layout": "vertical",
+        "imagens": ["/images/KN2_12.jpg", "/images/KN2_13.jpg"]
       },
       {
         "layout": "full",
-        "imagens": ["/images/KN2_07.jpg"]
+        "imagens": ["/images/KN2_14.jpg"]
       }
     ]
   },
@@ -189,7 +205,7 @@
     "miniatura": "/miniaturas/logo_cb.jpg",
     "capa": "/images/01.jpg",
     "blocos": [
-     {
+      {
         "layout": "full",
         "video": ["https://player.vimeo.com/video/1148924140"]
       },
@@ -204,10 +220,9 @@
         "layout": "full",
         "video": ["https://player.vimeo.com/video/1148917312"]
       },
-      
       {
         "layout": "full",
-        "imagens": ["/images/cb_05.jpg"] 
+        "imagens": ["/images/cb_05.jpg"]
       }
     ]
   }
