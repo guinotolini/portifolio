@@ -62,7 +62,7 @@ export default function Home() {
                 >
                   {bloco.video ? (
                     <div
-                      className="relative w-full max-w-7xl aspect-video overflow-hidden rounded-2xl"
+                      className="relative w-full aspect-video overflow-hidden rounded-2xl"
                     >
                       <iframe
                         src={`${Array.isArray(bloco.video) ? bloco.video[0] : bloco.video}${
